@@ -88,7 +88,7 @@ function statusChangeCallback(response) {
                 
                 if(response == "success"){
                     
-                    window.location.replace("/stock");
+                    window.location.replace("/");
                 }else{
                     alert("OOPPSSS Something wrong...");
                 }
@@ -104,15 +104,15 @@ function statusChangeCallback(response) {
   the JavaScript SDK to present a graphical Login button that triggers
   the FB.login() function when clicked.
 -->
-
-
 <div class="container" style="margin: 300px 300px 300px 300px;">
-    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-    </fb:login-button>
+@auth
+          Already logged in as {{ Auth::user()->name }}
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Back to home</button> 
+@else
 
+    
 
-    <div id="status">
-    </div>
+@endauth
 </div>
 
 </body>

@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('welcome');
-});
+}); */
 
-Route::get('/stock', 'stockController@index');
+Route::get('/', 'stockController@index');
 Route::get('/fbLogin', 'stockController@fbLogin');
 Route::get('/fbLogout', 'stockController@fbLogout');
 Route::post('/fbLoginPost', 'stockController@fbLoginPost');

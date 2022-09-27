@@ -51,7 +51,7 @@ class stockController extends Controller
     public function  fbLogout(){
         Session::flush();
         Auth::logout();
-        return redirect('/fbLogin');
+        return redirect('/');
     }
 
     public function saveData(Request $request){
